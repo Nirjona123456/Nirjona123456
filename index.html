@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Upload & Details</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+<h1>Artsnap Studio Image</h1>
+
+<input type="file" id="imageUpload" accept="image/*" />
+<img id="imageToDownload" style="display:none;" alt="Uploaded Image"/>
+
+<form id="imageDetailsForm" style="display: none;">
+   <h3>Image Details</h3>
+   <label>Title:</label><input type="text" id="imageTitle" required />
+   <label>Description:</label><textarea id="imageDescription" required></textarea>
+   <label>Format:</label><input type="text" id="imageFormat" required />
+   <label>Price (USD):</label><input type="number" id="imagePrice" required />
+   <label>File Size (MB):</label><input type="number" id="imageSize" required />
+   <label>Resolution:</label><input type="text" id="imageResolution" required />
+   <label>Tags:</label><input type="text" id="imageCategory" required />
+   <label>Copyright:</label><input type="text" id="imageCopyright" required />
+   <button type="submit">Submit Details</button>
+</form>
+
+<button id="downloadBtn">Download Image</button>
+<button id="viewDetailsBtn" style="display: none;">View Details</button>
+
+<div id="submittedDetails" class="details-card" style="display: none;">
+   <h3>Submitted Image Details</h3>
+   <ul id="detailsList"></ul>
+</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
